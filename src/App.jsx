@@ -34,7 +34,7 @@ export default function App() {
         >
           {
             ({ touched, isSubmitting, errors, isValid }) => (
-              <Form>
+              <Form className={`border-2 border ${isValid ? "border-success" : "border-danger"}`}>
                 <Input clickInINP={touched.userName} typeINP="text" placeholderINP="user Name" titleINP="userName" errorINP={errors.userName} />
                 <Input clickInINP={touched.email} typeINP="email" placeholderINP="Email" titleINP="email" errorINP={errors.email} />
                 <Input clickInINP={touched.password} typeINP="password" placeholderINP="password" titleINP="password" errorINP={errors.password} />
