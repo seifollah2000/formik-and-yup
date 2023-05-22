@@ -10,7 +10,13 @@
 .formikAndYup > div {
   padding: 0.5rem;
   width: fit-content;
-
   background-color: #6f6d6d78;
   border: 1px solid #bb2d3b;
+}
+.containerINP {
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+.containerINP > input {
+  outline: none;
 }
