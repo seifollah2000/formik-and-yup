@@ -33,13 +33,13 @@ export default function App() {
           validationSchema={validationSchema}
         >
           {
-            ({ touched, isSubmitting, errors }) => (
+            ({ touched, isSubmitting, errors, isValid }) => (
               <Form>
                 <Input clickInINP={touched.userName} typeINP="text" placeholderINP="user Name" titleINP="userName" errorINP={errors.userName} />
                 <Input clickInINP={touched.email} typeINP="email" placeholderINP="Email" titleINP="email" errorINP={errors.email} />
                 <Input clickInINP={touched.password} typeINP="password" placeholderINP="password" titleINP="password" errorINP={errors.password} />
 
-                <button type='submit ' className='w-100 btn py-2 btn-danger my-3'  >
+                <button type='submit ' className={`${isValid ? "btn-success" : "btn-danger "} w-100 btn py-2  my-3`}  >
                   {
                     isSubmitting ? (
                       "LODING ..."
